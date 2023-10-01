@@ -199,7 +199,7 @@ proxy_BCA <- function(Z, D, Y,
   # call main function
   proxy_BCA_NoChecks(Z = Z, D = D, Y = Y,
                           A_set = A_set,
-                          learner = get.learner_regr(make.mlr3.environment(learner, regr=False)), # must be mlr3 object
+                          learner = get.learner_regr(make.mlr3.environment(learner, regr = FALSE)), # must be mlr3 object
                           min_variation = min_variation)
 
 } # END FUN
@@ -325,7 +325,7 @@ proxy_CATE <- function(Z, D, Y,
   # run main function
   proxy_CATE_NoChecks(Z = Z, D = D, Y = Y,
                       A_set = A_set,
-                      learner = get.learner_regr(make.mlr3.environment(learner)), # must be mlr3 object
+                      learner = get.learner_regr(make.mlr3.environment(learner, regr = FALSE)), # must be mlr3 object
                       proxy_BCA = proxy_BCA,
                       min_variation = min_variation)
 
